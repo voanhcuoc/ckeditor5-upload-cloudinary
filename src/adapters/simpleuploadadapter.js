@@ -82,6 +82,7 @@ export default class SimpleUploadAdapter extends Plugin {
 		this.editor.plugins.get( FileRepository ).createUploadAdapter = loader => {
 			return new Adapter( loader, options );
 		};
+		console.log(this.editor.plugins.get( FileRepository ));
 	}
 }
 
