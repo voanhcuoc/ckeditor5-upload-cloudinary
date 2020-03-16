@@ -57,7 +57,7 @@ export default class SimpleUploadAdapter extends Plugin {
 	 * @inheritDoc
 	 */
 	init() {
-		const options = this.editor.config.get( 'simpleUpload' );
+		const options = this.editor.config.get( 'cloudinaryUpload' );
 
 		if ( !options ) {
 			return;
@@ -72,19 +72,19 @@ export default class SimpleUploadAdapter extends Plugin {
 			 * @error simple-upload-adapter-missing-uploadUrl
 			 */
 			console.warn(
-				'Invalid "simpleUpload" editor configuration for Cloudinary integration, require CLOUDINARY_UPLOAD_URL and CLOUDINARY_UPLOAD_PRESET.'
+				'Invalid "cloudinaryUpload" editor configuration for Cloudinary integration, require CLOUDINARY_UPLOAD_URL and CLOUDINARY_UPLOAD_PRESET.'
 			);
 
 			return;
 		}
 
-		console.log("createUploadAdapter");
+		console.log( 'createUploadAdapter' );
 		this.editor.plugins.get( FileRepository ).createUploadAdapter = loader => {
 			return new Adapter( loader, options );
 		};
-		console.log("the plugin");
+		console.log( 'the plugin' );
 		window.fileRepo = this.editor.plugins.get( FileRepository );
-		console.log(window.fileRepo);
+		console.log( window.fileRepo );
 	}
 }
 
@@ -128,14 +128,14 @@ class Adapter {
 		const signal = this.abortController.signal;
 
 		const data = new FormData();
-		data.append("upload_preset", this.options.CLOUDINARY_UPLOAD_PRESET);
+		data.append( 'upload_preset', this.options.CLOUDINARY_UPLOAD_PRESET );
 		const file = await this.loader.file;
-		data.append("file", file);
-		const res = await fetch(this.options.CLOUDINARY_UPLOAD_URL, {
-			method: "POST",
+		data.append( 'file', file );
+		const res = await fetch( this.options.CLOUDINARY_UPLOAD_URL, {
+			method: 'POST',
 			body: data,
 			signal
-		});
+		} );
 		const { secure_url } = await res.json();
 
 		return {
