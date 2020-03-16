@@ -1,5 +1,5 @@
 {
-  "name": "@ckeditor/ckeditor5-upload-cloudinary",
+  "name": "@ckeditor/ckeditor5-upload",
   "version": "17.0.0",
   "description": "Upload Feature for CKEditor 5. Cloudinary integration.",
   "keywords": [
