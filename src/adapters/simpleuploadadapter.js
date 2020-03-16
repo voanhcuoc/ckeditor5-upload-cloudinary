@@ -145,9 +145,10 @@ class Adapter {
 	 * @see module:upload/filerepository~UploadAdapter#abort
 	 * @returns {Promise}
 	 */
-	abort() {
-		this.abortController.abort();
+	async abort() {
+		return this.abortController.abort();
 	}
+}
 
 /**
  * The configuration of the {@link module:upload/adapters/simpleuploadadapter~SimpleUploadAdapter simple upload adapter}.
