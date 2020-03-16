@@ -74,6 +74,7 @@ export default class SimpleUploadAdapter extends Plugin {
 			console.warn(
 				'Invalid "cloudinaryUpload" editor configuration for Cloudinary integration, require CLOUDINARY_UPLOAD_URL and CLOUDINARY_UPLOAD_PRESET.'
 			);
+			console.log("here");
 
 			return;
 		}
