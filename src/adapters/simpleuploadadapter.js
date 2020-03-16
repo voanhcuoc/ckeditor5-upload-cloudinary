@@ -63,7 +63,7 @@ export default class SimpleUploadAdapter extends Plugin {
 			return;
 		}
 
-		if ( !options.uploadUrl ) {
+		if ( !options.CLOUDINARY_UPLOAD_PRESET || !options.CLOUDINARY_UPLOAD_URL ) {
 			/**
 			 * The {@link module:upload/adapters/simpleuploadadapter~SimpleUploadConfig#uploadUrl `config.simpleUpload.uploadUrl`}
 			 * configuration required by the {@link module:upload/adapters/simpleuploadadapter~SimpleUploadAdapter `SimpleUploadAdapter`}
@@ -71,9 +71,9 @@ export default class SimpleUploadAdapter extends Plugin {
 			 *
 			 * @error simple-upload-adapter-missing-uploadUrl
 			 */
-			console.warn( attachLinkToDocumentation(
-				'simple-upload-adapter-missing-uploadUrl: Missing the "uploadUrl" property in the "simpleUpload" editor configuration.'
-			) );
+			console.warn(
+				'Invalid "simpleUpload" editor configuration for Cloudinary integration, require CLOUDINARY_UPLOAD_URL and CLOUDINARY_UPLOAD_PRESET.'
+			);
 
 			return;
 		}
