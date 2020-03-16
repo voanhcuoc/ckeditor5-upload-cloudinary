@@ -1,12 +1,13 @@
 {
-  "name": "@ckeditor/ckeditor5-upload",
+  "name": "@ckeditor/ckeditor5-upload-cloudinary",
   "version": "17.0.0",
-  "description": "Upload Feature for CKEditor 5.",
+  "description": "Upload Feature for CKEditor 5. Cloudinary integration.",
   "keywords": [
     "ckeditor",
     "ckeditor5",
     "ckeditor 5",
-    "ckeditor5-lib"
+    "ckeditor5-lib",
+    "cloudinary"
   ],
   "dependencies": {
     "@ckeditor/ckeditor5-core": "^17.0.0",
@@ -27,11 +28,9 @@
   },
   "author": "CKSource (http://cksource.com/)",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5-upload.git"
+    "url": "https://github.com/voanhcuoc/ckeditor5-upload-cloudinary.git"
   },
   "files": [
     "lang",
