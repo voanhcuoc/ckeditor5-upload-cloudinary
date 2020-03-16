@@ -40,7 +40,7 @@ export default class FileRepository extends Plugin {
 	 * @inheritDoc
 	 */
 	static get pluginName() {
-		return 'FileRepositoryRenamed';
+		return 'FileRepository';
 	}
 
 	/**
