@@ -43,7 +43,7 @@ export default class SimpleUploadAdapter extends Plugin {
 	 * @inheritDoc
 	 */
 	static get requires() {
-		return [ 'FileRepository' ];
+		return [ FileRepository ];
 	}
 
 	/**
